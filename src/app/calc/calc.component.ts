@@ -10,6 +10,9 @@ export class CalcComponent implements OnInit {
   constructor() { }
   inputStr: any
   ngOnInit(): void {
+  this.inputStr = new FormGroup({
+    text : new FormControl()
+  })
   }
 
 }
