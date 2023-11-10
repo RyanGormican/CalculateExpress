@@ -42,4 +42,23 @@ export class CalcComponent implements OnInit {
     str = str.slice(0,-1)
       this.inputStr.controls.text.setValue(str)
   }
+  calculateSquareRoot() {
+    let value = parseFloat(this.inputStr.controls.text.value);
+    if (!isNaN(value)) {
+      this.inputStr.controls.text.setValue(Math.sqrt(value));
+    }
+  }
+  toggle() {
+  let value = parseFloat(this.inputStr.controls.text.value);
+    if (!isNaN(value)) {
+      this.inputStr.controls.text.setValue(-value);
+    }
+    }
+   calculatePercent() {
+     let value = parseFloat(this.inputStr.controls.text.value);
+      if (!isNaN(value)) {
+      this.inputStr.controls.text.setValue(value/100);
+    }
+   
+  }
 }
