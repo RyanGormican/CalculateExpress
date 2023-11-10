@@ -30,4 +30,8 @@ export class CalcComponent implements OnInit {
   clearCalc() {
   this.inputStr.controls.text.setValue("")
   }
+  doCalc() {
+    let result = eval(this.inputStr.controls.text.value)
+      this.inputStr.controls.text.setValue(result)
+  }
 }
