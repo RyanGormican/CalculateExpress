@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-calc',
   templateUrl: './calc.component.html',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CalcComponent implements OnInit {
 
   constructor() { }
-
+  inputStr: any
   ngOnInit(): void {
   }
 
