@@ -8,6 +8,20 @@
 </head>
 <body>
   <div class="container">
+
+  <div className="links">
+    <a href="https://www.linkedin.com/in/ryangormican/">
+ Linkedin
+</a>
+<a href="https://github.com/RyanGormican/CalculateExpress">
+Github
+</a>
+<a href="https://ryangormicanportfoliohub.vercel.app/">
+Portfolio
+</a>
+   
+  </div>
+
     <div class="display">
       <form action="" [formGroup]="inputStr">
         <input type="text" formControlName="text">
@@ -39,6 +53,7 @@
           <button (click)="buttonClick($event.target)"class ="btn">5</button>
           <button (click)="buttonClick($event.target)"class ="btn">6</button>
           <button (click)="buttonClick($event.target)"class ="btn">0</button>
+          <button (click)="deleteLast()"class ="btn">DEL</button>
         </div>
       </div>
 
