@@ -27,4 +27,7 @@ export class CalcComponent implements OnInit {
    buttonText)
     }
   }
+  clearCalc() {
+  this.inputStr.controls.text.setValue("")
+  }
 }
