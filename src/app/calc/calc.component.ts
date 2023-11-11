@@ -61,4 +61,30 @@ export class CalcComponent implements OnInit {
     }
    
   }
+  calculateTrig(func: string) {
+    let value = parseFloat(this.inputStr.controls.text.value);
+
+    switch (func) {
+      case 'sin':
+        this.inputStr.controls.text.setValue(Math.sin(value));
+        break;
+      case 'cos':
+        this.inputStr.controls.text.setValue(Math.cos(value));
+        break;
+      case 'tan':
+        this.inputStr.controls.text.setValue(Math.tan(value));
+        break;
+      case 'asin':
+        this.inputStr.controls.text.setValue(Math.asin(value));
+        break;
+      case 'acos':
+        this.inputStr.controls.text.setValue(Math.acos(value));
+        break;
+      case 'atan':
+        this.inputStr.controls.text.setValue(Math.atan(value));
+        break;
+      default:
+        break;
+    }
+    }
 }
