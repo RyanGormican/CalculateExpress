@@ -63,7 +63,7 @@ export class CalcComponent implements OnInit {
   }
   calculateTrig(func: string) {
     let value = parseFloat(this.inputStr.controls.text.value);
-
+      if (!isNaN(value)) {
     switch (func) {
       case 'sin':
         this.inputStr.controls.text.setValue(Math.sin(value));
@@ -87,4 +87,20 @@ export class CalcComponent implements OnInit {
         break;
     }
     }
+    }
+    
+  calculateExponential() {
+    let value = parseFloat(this.inputStr.controls.text.value);
+      if (!isNaN(value)) {
+    this.inputStr.controls.text.setValue(Math.exp(value));
+    }
+  }
+   calculateLogarithm() {
+    let value = parseFloat(this.inputStr.controls.text.value);
+    if (value > 0) {
+      this.inputStr.controls.text.setValue(Math.log(value));
+    } else {
+  
+    }
+  }
 }
