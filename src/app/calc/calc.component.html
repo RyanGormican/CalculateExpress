@@ -33,12 +33,15 @@
 
       <div class = "operations row">
         <div class="col-auto">
+        <button (click)="calculateSquare()" class="btn">x<sup>2</sup></button>
+        <button (click)="calculateCube()" class="btn">x<sup>3</sup></button>
           <button (click)="buttonClick($event.target)" class ="btn">+</button>
           <button (click)="buttonClick($event.target)"class ="btn">-</button>
           <button (click)="buttonClick($event.target)"class ="btn">*</button>
           <button (click)="buttonClick($event.target)" class ="btn">/</button>
           <button (click)="calculateSquareRoot()" class="btn">√</button>
           <button (click) ="doCalc()" class ="btn">=</button>
+
         </div>
       </div>
 

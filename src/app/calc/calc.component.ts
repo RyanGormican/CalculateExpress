@@ -103,4 +103,18 @@ export class CalcComponent implements OnInit {
   
     }
   }
+
+   calculateSquare() {
+    let value = parseFloat(this.inputStr.controls.text.value);
+        if (!isNaN(value)) {
+    this.inputStr.controls.text.setValue(Math.pow(value, 2));
+    }
+  }
+
+  calculateCube() {
+    let value = parseFloat(this.inputStr.controls.text.value);
+        if (!isNaN(value)) {
+    this.inputStr.controls.text.setValue(Math.pow(value, 3));
+    }
+  }
 }
