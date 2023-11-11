@@ -117,4 +117,38 @@ export class CalcComponent implements OnInit {
     this.inputStr.controls.text.setValue(Math.pow(value, 3));
     }
   }
+calculateFactorial() {
+  let value = parseFloat(this.inputStr.controls.text.value);
+  if (!isNaN(value) && Number.isInteger(value) && value >= 0) {
+    this.inputStr.controls.text.setValue(this.factorial(value));
+  } else {
+  }
+}
+factorial(n: number): number {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * this.factorial(n - 1);
+}
+insertConstant(constant: string) {
+  switch (constant) {
+    case 'pi':
+    if(this.inputStr.controls.text.value!= null){
+   this.inputStr.controls.text.setValue(this.inputStr.controls.text.value + Math.PI);
+    }else
+    {
+     this.inputStr.controls.text.setValue(Math.PI);
+    }
+     
+      break;
+    case 'e':
+      if(this.inputStr.controls.text.value!= null){
+   this.inputStr.controls.text.setValue(this.inputStr.controls.text.value + Math.E);
+    }else
+    {
+     this.inputStr.controls.text.setValue(Math.E);
+    }
+      break;
+      }
+      }
 }

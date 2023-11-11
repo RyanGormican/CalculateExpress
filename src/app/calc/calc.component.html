@@ -28,6 +28,8 @@
     <button (click)="calculateTrig('atan')" class="btn">tan<sup>-1</sup></button>
     <button (click)="calculateExponential()" class="btn">e<sup>x</sup></button>
     <button (click)="calculateLogarithm()" class="btn">ln</button>
+    <button (click)="insertConstant('pi')" class="btn">π</button>
+    <button (click)="insertConstant('e')" class="btn constant">e</button>
   </div>
 </div>
 
@@ -52,6 +54,7 @@
           <button (click)="buttonClick($event.target)"class ="btn">3</button>
           <button (click)="toggle()" class="btn">+/-</button>
           <button (click)="calculatePercent()" class="btn">%</button>
+          <button (click)="calculateFactorial()" class="btn">!</button>
           <button (click)="clearCalc()"class ="btn">Clear</button>
         </div>
       </div>
